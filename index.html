@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cerita Kita</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*style keseluruhan umum*/
+      body {
+        font-family: Arial, sans-serif;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        background: linear-gradient(
+          50deg,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #041185,
+          #1e309b,
+          #3a51b3,
+          #546fca,
+          #6988dc,
+          #80a3f0,
+          #91b8ff,
+          #91b8ff,
+          #80a3f0,
+          #6988dc,
+          #546fca,
+          #3a51b3,
+          #1e309b,
+          #041185
+        );
+      }
+
+      .italic {
+        font-style: italic;
+        margin-bottom: -10px; /* jarak bawah italicnya babik */
+      }
+
+      .small-font {
+        font-size: 1.5em; /* ukuran "small font" buat title */
+      }
+
+      .large-font {
+        font-size: 2em; /* kayak diatas tapi gede */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: transparent;
+        position: relative;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 30px;
+        margin-top: 10px;
+        margin-right: 20px;
+        align-self: flex-start;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        font-family: "Poppins", sans-serif;
+        text-shadow: 1px 3px 4px #00000086;
+        margin-top: 10px;
+        margin-right: 20px;
+        align-self: flex-start;
+      }
+
+      .section-button {
+        background-color: #ff7a4d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 35px;
+        margin: 15px 0;
+        margin-left: 4em;
+        display: inline-block;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1em;
+        text-shadow: 1px 3px 4px #00000086;
+      }
+
+      .book-slider {
+        position: relative;
+        display: flex;
+        overflow-x: scroll;
+        padding: 20px;
+        margin-left: 4em;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .book-slider .book-container {
+        /*buat gambar buku*/
+        display: flex;
+        gap: 15px;
+      }
+
+      .book-slider img {
+        width: 200px;
+        height: 300px;
+        border-radius: 30px;
+        cursor: pointer;
+        scroll-snap-align: start;
+      }
+
+      .quote-section {
+        background-color: #ffffff;
+        padding: 40px;
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #1a009f;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+
+      .genre-buttons {
+        background-color: #ffffff;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+        margin-bottom: 20px;
+      }
+
+      .genre-buttons button {
+        background-color: #ff7a4d;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 35px;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.3em;
+        text-shadow: 1px 3px 4px #00000086;
+      }
+
+      .tentang-kita {
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1em;
+        text-shadow: 1px 3px 4px #00000086;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="https://ibb.co.com/yqQP4gQ"
+        ><img src="https://i.ibb.co.com/yqQP4gQ/Frame-14.png" alt="Cerita Kita"
+      /></a>
+      <nav class="nav-links">
+        <a href="#">Beranda</a>
+        <a href="#">Bacaan</a>
+        <a href="menurutmu.html">Menurutmu</a>
+        <a href="#">Tentang Kita</a>
+      </nav>
+    </header>
+
+    <!-- yang terbitan tahun ini-->
+    <div class="section-button">Terbitan tahun ini</div>
+
+    <!-- slider buku 1 -->
+    <div class="book-slider">
+      <span class="arrow left" onclick="scrollSlider('popular', -200)"
+        >&#8249;</span
+      >
+      <div class="book-container" id="popular-slider">
+        <a href="book1.html"
+          ><img
+            src="https://o-cdn-cas.oramiland.com/parenting/images/WhatsApp_Image_2022-07-19_at_3.51.width-800.format-webp.webp"
+            alt="Book 1"
+        /></a>
+        <a href="book2.html"
+          ><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGtuTH1wBtkqZoufe-fdBgk17ke9v6_Qv7VQ&s"
+            alt="Book 2"
+        /></a>
+        <a href="book3.html"
+          ><img
+            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1709540213i/207861795.jpg"
+            alt="Book 3"
+        /></a>
+        <a href="book4.html"
+          ><img
+            src="https://mpd-biblio-covers.imgix.net/9781250323033.jpg"
+            alt="Book 4"
+        /></a>
+        <a href="book5.html"
+          ><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqjVmH6zoaMOv2icPnRSO_nFnJB2oa6Nx17w&s"
+            alt="Book 5"
+        /></a>
+        <a href="book6.html"
+          ><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7uDB4-WCS_aEbo6GW2uYWoMyxUSsFWLtjw&s"
+            alt="Book 6"
+        /></a>
+        <!-- Dari sini-->
+        <a href="book7.html"
+          ><img
+            src="https://gpu.id/data-gpu/images/img-book/94360/Ratu_Adil.jpg"
+            alt="Book 7"
+        /></a>
+        <a href="book8.html"
+          ><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIhVE5dOAyk6WhVH_arYkzE2ZcJY2wKY_Jzw&s"
+            alt="Book 8"
+        /></a>
+      </div>
+      <span class="arrow right" onclick="scrollSlider('popular', 200)"
+        >&#8250;</span
+      >
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section" onclick="nextQuote()">
+      <span id="quote-text"
+        >“Jangan pernah jatuh cinta saat hujan...” — Tere Liye, Hujan</span
+      >
+    </div>
+
+    <!-- Paling Disukai Button -->
+    <div class="section-button">Paling disukai</div>
+
+    <!-- Book Slider Section (Most Liked) -->
+    <div class="book-slider">
+      <span class="arrow left" onclick="scrollSlider('liked', -200)"
+        >&#8249;</span
+      >
+      <div class="book-container" id="liked-slider">
+        <a href="book1.html"
+          ><img
+            src="https://cdn.gramedia.com/uploads/items/9786024246945_Laut-Bercerita.jpg"
+            alt="Book 1"
+        /></a>
+        <a href="book2.html"
+          ><img
+            src="https://inc.mizanstore.com/aassets/img/com_cart/produk/cantik-itu-luka-hc-limited-edition-eka-kurniawan.jpg"
+            alt="Book 2"
+        /></a>
+        <a href="book3.html"
+          ><img
+            src="https://ebooks.gramedia.com/ebook-covers/10084/big_covers/ID_GPU2014MTH04SDRHDT_B.jpg"
+            alt="Book 3"
+        /></a>
+        <a href="book4.html"
+          ><img
+            src="https://cdn.gramedia.com/uploads/items/img20220905_11493451.jpg"
+            alt="Book 4"
+        /></a>
+        <a href="book5.html"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/id/8/8e/Laskar_pelangi_sampul.jpg"
+            alt="Book 5"
+        /></a>
+        <a href="book6.html"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/id/5/56/Harry_potter_deathly_hallows_US.jpg"
+            alt="Book 6"
+        /></a>
+        <!-- Dari sini-->
+        <a href="book7.html"
+          ><img
+            src="https://preview.redd.it/best-book-cover-v0-7aj9dpslnntb1.jpg?width=257&format=pjpg&auto=webp&s=b69e73a3200efe5480ebd8129a5aff932e8f832c"
+            alt="Book 7"
+        /></a>
+        <a href="book8.html"
+          ><img
+            src="https://www.gramedia.com/blog/content/images/2021/03/pulang-pergi_tere_liye.jpeg"
+            alt="Book 8"
+        /></a>
+      </div>
+      <span class="arrow right" onclick="scrollSlider('liked', 200)"
+        >&#8250;</span
+      >
+    </div>
+
+    <!-- Genre Buttons -->
+    <div class="genre-buttons">
+      <a href="action.html"><button>Action</button></a>
+      <a href="romance.html"><button>Romansa</button></a>
+      <a href="drama.html"><button>Drama</button></a>
+      <a href="komedi.html"><button>Komedi</button></a>
+    </div>
+
+    <!-- Paling Disukai Button -->
+    <div class="section-button">Radar rilis</div>
+
+    <div class="book-slider">
+      <span class="arrow left" onclick="scrollSlider('popular', -200)"
+        >&#8249;</span
+      >
+      <div class="book-container" id="popular-slider">
+        <a
+          href="https://online.fliphtml5.com/ccwxt/tvtn/files/large/1.webp?1642132194&1642132194"
+        >
+          <img
+            src="https://online.fliphtml5.com/ccwxt/tvtn/files/large/1.webp?1642132194&1642132194"
+            alt="Ubur - Ubur Lembur"
+          />
+        </a>
+        <a
+          href="https://cdn.gramedia.com/uploads/items/9789797808952C_9789797808952.jpg"
+        >
+          <img
+            src="https://cdn.gramedia.com/uploads/items/9789797808952C_9789797808952.jpg"
+            alt="Kambing Jantan"
+          />
+        </a>
+        <a
+          href="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1487061334i/18777569.jpg"
+        >
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1487061334i/18777569.jpg"
+            alt="Ngenest"
+          />
+        </a>
+        <a
+          href="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490323010i/3029362.jpg"
+        >
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490323010i/3029362.jpg"
+            alt="Jomblo: Sebuah Komedi Cinta"
+          />
+        </a>
+        <a
+          href="https://cdn.gramedia.com/uploads/items/9789797808983_Manusia-Seten.jpg"
+        >
+          <img
+            src="https://cdn.gramedia.com/uploads/items/9789797808983_Manusia-Seten.jpg"
+            alt="Manusia Setengah Salmon"
+          />
+        </a>
+        <a
+          href="https://cdn.gramedia.com/uploads/items/9789797808969C_9789797808969.jpg"
+        >
+          <img
+            src="https://cdn.gramedia.com/uploads/items/9789797808969C_9789797808969.jpg"
+            alt="Cinta Brontosaurus"
+          />
+        </a>
+        <a
+          href="https://m.media-amazon.com/images/I/81KT-CRkI6L._AC_UF1000,1000_QL80_.jpg"
+        >
+          <img
+            src="https://m.media-amazon.com/images/I/81KT-CRkI6L._AC_UF1000,1000_QL80_.jpg"
+            alt="Temporary"
+          />
+        </a>
+        <a
+          href="https://ebooks.gramedia.com/ebook-covers/79862/image_highres/BLK_PSOL2022769611.jpg"
+        >
+          <img
+            src="https://ebooks.gramedia.com/ebook-covers/79862/image_highres/BLK_PSOL2022769611.jpg"
+            alt="Pay Sooner or Later"
+          />
+        </a>
+      </div>
+
+      <span class="arrow right" onclick="scrollSlider('popular', 200)"
+        >&#8250;</span
+      >
+    </div>
+
+    <div class="tentang-kita">
+      Tak kenal maka tak sayang, yuk kenalan sama orang dibalik Cerita Kita
+    </div>
+
+    <script>
+      //ini js buat scroll x//
+      function scrollSlider(id, scrollAmount) {
+        const container = document.getElementById(id + "-slider");
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+
+      //ini js buat cycle quotes//
+      const quotes = [
+        "“GUAH CAPEK” — Keyo",
+        "“Jangan biarkan kenangan membuatmu berhenti...” — Dewi Lestari",
+        "“Jangan pernah jatuh cinta saat hujan. Karena ketika besok blabla.”― Tere Liye, Hujan",
+      ];
+      let currentQuote = 0;
+
+      function nextQuote() {
+        currentQuote = (currentQuote + 1) % quotes.length;
+        document.getElementById("quote-text").innerText = quotes[currentQuote];
+      }
+    </script>
+  </body>
+</html>
